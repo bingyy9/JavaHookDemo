@@ -12,11 +12,11 @@ public class TestReflectSingleInstanceObject {
     public static void main(String[] args){
         MainActivityTwo mainActivityTwo = new MainActivityTwo();
         mainActivityTwo.test();
-        hookHelloService(mainActivityTwo);
+        hookHelloService();
         mainActivityTwo.test();
     }
 
-    public static void hookHelloService(MainActivityTwo mainActivityTwo){
+    public static void hookHelloService(){
         try{
             Class<?> helloModelClazz = Class.forName("com.reflect.proxy.common.HelloModel");
             Field mHelloInstanceField = helloModelClazz.getDeclaredField("mInstance");

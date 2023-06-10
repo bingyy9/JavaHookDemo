@@ -8,4 +8,11 @@ public class HelloModel {
         }
         return mInstance;
     }
+
+    public IHello getInstance2(){
+        if(mInstance == null){
+            mInstance = new HelloService();
+        }
+        return mInstance;
+    }
 }
